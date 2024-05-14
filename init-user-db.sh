@@ -2,7 +2,7 @@
 set -e
 
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-	CREATE USER jabref;
+	CREATE USER jabref WITH PASSWORD 'rOASR9wvaQDSYQX6tSKEGxiyJd2viW5W';
 	CREATE DATABASE jabref;
 	GRANT ALL PRIVILEGES ON DATABASE jabref TO jabref;
 EOSQL
